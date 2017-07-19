@@ -284,7 +284,7 @@
               
                 
                 <a class="post-title-link" href="/2017/07/19/跑车图/" itemprop="url">
-                  content
+                  喜欢的跑车
                 </a>
               
             
@@ -338,7 +338,7 @@
       
         
           
-            <p><img src="/2017/07/19/跑车图/content-1/1car.jpg" alt="替代的文字"></p>
+            <p><img src="/2017/07/19/跑车图/1car.jpg" alt="替代的文字"><br><img src="/2017/07/19/跑车图/2car.jpg" alt="替代的文字"><br><img src="/2017/07/19/跑车图/3car.jpg" alt="替代的文字"><br><img src="/2017/07/19/跑车图/4car.jpg" alt="替代的文字"></p>
 
           
         
@@ -555,6 +555,28 @@
 </ul>
 <h2 id="7-建目录"><a href="#7-建目录" class="headerlink" title="7. 建目录"></a>7. 建目录</h2><ul>
 <li>hexo new page photo</li>
+</ul>
+<h2 id="8-带图片上传的md"><a href="#8-带图片上传的md" class="headerlink" title="8.带图片上传的md"></a>8.带图片上传的md</h2><blockquote>
+<p>First</p>
+</blockquote>
+<ul>
+<li><p>1 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true</p>
+</li>
+<li><p>2 在你的hexo目录下执行这样一句话npm install hexo-asset-image –save，这是下载安装一个可以上传本地图片的插件，来自dalao：dalao的git</p>
+</li>
+<li><p>3 等待一小段时间后，再运行hexo n “xxxx”来生成md博文时，/source/_posts文件夹内除了xxxx.md文件还有一个同名的文件夹</p>
+</li>
+</ul>
+<blockquote>
+<p>Second</p>
+</blockquote>
+<ul>
+<li><p>4 最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：</p>
+<p>  <code>!删[你想输入的替代文字]删(xxxx/图片名.jpg删)删</code></p>
+<p>  <strong>注意：</strong>xxxx是这个md文件的名字，也是同名文件夹的名字，<br>  你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径。</p>
+</li>
+<li><p>5 最后检查一下，hexo g生成页面后，进入public\2017\02\26\index.html文件中查看相关字段，可以发现，html标签内的语句是<img src="/2017/07/19/content/2017/02/26/xxxx/图片名.jpg">，而不是&lt;img src=”xxxx/图片名.jpg&gt;。这很重要，关乎你的网页是否可以真正加载你想插入的图片。</p>
+</li>
 </ul>
 
           
